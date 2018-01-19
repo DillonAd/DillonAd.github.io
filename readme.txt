@@ -1,4 +1,4 @@
-# DillonAd.github.io
+DillonAd.github.io
 
 This is my personal website.
 

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./styles.css" />
+
+        <script type="text/javascript" src="./scripts/command.js"></script>
+        <script type="text/javascript" src="./scripts/console.js"></script>
+        <script type="text/javascript" src="./scripts/repos.js"></script>
+        <script type="text/javascript" src="./scripts/scripts.js"></script>
+        <script type="text/javascript" src="./scripts/view.js"></script>
+
+        <script type="text/javascript">
+             //Thank you StackOverflow!
+            var ua = window.navigator.userAgent;
+            var msie = ua.indexOf("MSIE ");
+            var ie11 = ua.match(/Trident.*rv\:11\./);
+
+            debugger;
+            if (msie > 0 || ie11) {
+                alert("Seeing some odd behavior? \
+                    Try using something other than Internet Explorer. \
+                    Sorry about the inconvenience!");
+            }
+        </script>
+    </head>
+    <body onload="load()" onclick="focusConsole()" onkeypress="focusConsole()">
+        <div id="console" onclick="consoleInteract()" onkeydown="consoleInteract()">
+        </div>
+        <div id="consoleInputBox">
+            <span>></span>
+            <input type="text" id="consoleInput" onkeydown="consoleCommand(event)"/>
+        </div>
+        <span id="spacer"><input hidden /></span>
+        <div id="home" class="contentModal">
+            <div class="contentView">
+                <h1>Home</h1>
+                <p>
+                    Hello! My name is Dillon Adams and I am a software developer/engineer that 
+                    loves to solve complex problems and puzzles. My personal projects and contact
+                    information are available within.
+                </p>
+                <p>
+                    
+                </p>
+            </div>
+        </div>
+        <div id="repos" class="contentModal">
+            <div id="reposContent" class="contentView">
+                <h1>Repos</h1>
+            </div>
+        </div>
+        <div id="contact" class="contentModal">
+            <div class="contentView">
+                <h1>Contact</h1>
+                <ul>
+                    <li>
+                        Find me on 
+                        <a href="https://github.com/DillonAd">
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        Connect with me on 
+                        <a href="www.linkedin.com/in/dillon-adams-ba1a9429">
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        Follow me on 
+                        <a href="https://twitter.com/DillonThomasAd">
+                            Twitter
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
