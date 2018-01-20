@@ -9,7 +9,8 @@ async function loadRepos() {
 }
 
 async function loadReadMe(repo) {
-    var url = "https://raw.githubusercontent.com/DillonAd/" + repo.name + "/master/ReadMe.md"
+    var url = "https://raw.githubusercontent.com/DillonAd/" + repo.name + "/master/README.md"
+    console.log(url);
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function() { parseReadMe(repo, xhttp.response); };
     xhttp.onerror = reportError;
@@ -33,14 +34,7 @@ function parseRepos(response) {
 }
 
 function parseReadMe(repo, response) {
-    var response = response;
-
-    if(response.status === 200) {
-        displayReadMe(repo, content);
-    } else {
-        displayReadMe(repo, "Unable to get description.");
-    }
-
+    displayReadMe(repo, response);
 }
 
 function reportError(err) {
@@ -77,7 +71,7 @@ function displayReadMe(repo, content) {
     var repoNode = document.getElementById(repo.name);
 
     var descriptionNode = document.createElement("p");
-    descriptionNode.textContent = content;
+    descriptionNode.innerHTML = micromarkdown.parse(content);
 
     repoNode.appendChild(descriptionNode);
 }

@@ -1,5 +1,3 @@
-DillonAd.github.io
-
 This is my personal website.
 
 I thought the idea of a command line in the browser would be fun 
