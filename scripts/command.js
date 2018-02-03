@@ -31,7 +31,7 @@ function parseCommand(command) {
 
     switch(cmd) {
         case "?":
-        case "help": result = getHelpMenu(); break;
+        case "help": result = getHelpMenu(); closeCommand(); break;
         case "ls":
         case "dir": result = "No file system available"; break;
         case "ifconfig":
