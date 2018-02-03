@@ -11,7 +11,7 @@ input#consoleInput, input#consoleInput:focus, input#consoleInput:disabled {
     width: 95%;
     border: none;
     outline: none;
-    background-color: inherit;
+    background-color: #000;
     color: inherit;
 }
 

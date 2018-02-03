@@ -5,24 +5,7 @@
         <link rel="stylesheet" type="text/css" href="./styles.css" />
 
         <script type="text/javascript" src="https://cdn.rawgit.com/SimonWaldherr/micromarkdown.js/master/dist/micromarkdown.min.js"></script>
-        <script type="text/javascript" src="./scripts/command.js"></script>
-        <script type="text/javascript" src="./scripts/console.js"></script>
-        <script type="text/javascript" src="./scripts/repos.js"></script>
-        <script type="text/javascript" src="./scripts/scripts.js"></script>
-        <script type="text/javascript" src="./scripts/view.js"></script>
-
-        <script type="text/javascript">
-             //Thank you StackOverflow!
-            var ua = window.navigator.userAgent;
-            var msie = ua.indexOf("MSIE ");
-            var ie11 = ua.match(/Trident.*rv\:11\./);
-
-            if (msie > 0 || ie11) {
-                alert("Seeing some odd behavior? \
-                    Try using something other than Internet Explorer. \
-                    Sorry about the inconvenience!");
-            }
-        </script>
+        <script type="text/javascript" src="./startup.js"></script>
     </head>
     <body onload="load()" onclick="focusConsole()" onkeypress="focusConsole()">
         <div id="console" onclick="consoleInteract()" onkeydown="consoleInteract()">
