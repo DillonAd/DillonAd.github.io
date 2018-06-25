@@ -44,7 +44,7 @@ function parseCommand(command) {
         case "exit": exitCommand(); break;
         case "launch": launchCommand(command); break;
         case "close": closeCommand(); break;
-        default: result = helpMsg;
+        default: dematerializeView(getOpenView()); result = helpMsg;
     }
 
     return (result);
@@ -54,7 +54,7 @@ function getHelpMenu() {
     return "---HELP MENU--- \n \
     I intended to support the most common Unix/Windows commands by default \n \
     but that is a task that is far beyond the effort that should be exerted \n \
-    for such a simple website. There is only one valid command: \n \
+    for such a simple website. There is only a few valid commands: \n \
     \t launch - launches an information panel \n \
         \t\t valid options: \n \
             \t\t\t --home    - displays home information \n \

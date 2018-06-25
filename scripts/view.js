@@ -9,10 +9,8 @@ async function materializeView(viewName) {
 }
 
 async function dematerializeView(node) {
-    var i;
-
-    for(i = Number(node.style.opacity); i >= 0; i -= .01) {
-        await setElementOpacity(node, i);
+    for(let idx = Number(node.style.opacity); idx >= 0; idx -= .01) {
+        await setElementOpacity(node, idx);
     }
 
     node.style.display = "none";
@@ -26,4 +24,12 @@ function setElementOpacity(node, opacity) {
             }
         , 10);
     });
+}
+
+function getOpenView() {
+    var views = document.getElementsByClassName("contentModal");
+    var array = Array.prototype.slice.call(views, 0);
+    var elements = array.filter(function (element) { return window.getComputedStyle(element).display === "block"; });
+
+    return elements[0];
 }
