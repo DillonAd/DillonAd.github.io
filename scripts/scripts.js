@@ -20,7 +20,7 @@ function setElements() {
 
 async function displayLogin() {
     //The next block should imitate PuTTY and it connecting to Ubuntu
-    await typeCommand(">ssh buckbeaksNest");
+    await typeCommand(">ssh drakesNest");
 
     printLine("login:")
     await typeCommand("dillon");

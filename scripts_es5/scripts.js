@@ -20,7 +20,7 @@ function setElements() {
 
 function displayLogin() {
     //The next block should imitate PuTTY and it connecting to Ubuntu
-    typeCommand(">ssh buckbeaksNest");
+    typeCommand(">ssh drakesNest");
 
     printLine("login:")
     typeCommand("dillon");
