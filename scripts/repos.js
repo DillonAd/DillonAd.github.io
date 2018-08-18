@@ -24,10 +24,13 @@ function parseRepos(response) {
     var repos = new Array();
 
     for(var i = 0; i < response.length; i++) {
-        repo = new Object();
-        repo.name = response[i].name;
-        repo.html_url = response[i].html_url;
-        repos.push(repo);
+        if(!(response[i].fork == true))
+        {
+            repo = new Object();
+            repo.name = response[i].name;
+            repo.html_url = response[i].html_url;
+            repos.push(repo);
+        }
     }
 
     displayReposReult(repos);
