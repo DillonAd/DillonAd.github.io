@@ -1,0 +1,49 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    background-color: #FFF;
+    color: #3E3E3E
+}
+
+#header {
+    width: 100vw;
+    height: 10vh;
+    background-color: #800000;
+    color: #FFF;
+    padding: 1%;
+    font-size: 200%;
+}
+
+div#body {
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+}
+
+.body-col {
+    display: table-cell;
+    padding: 1px;
+    /* flex: 1; */
+}
+
+#nav {
+    width: 19vw;
+    height: 100vh;
+    border-right: 1px solid #708090;
+    padding: 1vw;
+}
+
+#nav ul {
+    padding: 0;
+}
+
+#nav ul li {
+    margin: 2vmax;
+}
+
+#content {
+    width: 73vw;
+    height: 100vh;
+    padding: 2vmax;
+}
