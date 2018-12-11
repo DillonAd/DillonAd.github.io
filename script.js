@@ -1,3 +1,6 @@
+const converter = new showdown.Converter();
+const title = "Automate The Planet!";
+
 async function query(url, callback) {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = () => callback(xhttp.response);
@@ -6,13 +9,21 @@ async function query(url, callback) {
     await xhttp.send();
 }
 
-async function loadContent(url) {
-    query(url, (markdown) => document.getElementById("content").innerHTML = markdown);
+async function loadContent(name, url) {
+    await query(url, (content) => {
+        const newTitle = title + " - " + name;
+        document.title = newTitle;
+
+        const markdown = converter.makeHtml(content);
+        document.getElementById("content").innerHTML = markdown;
+    });
 }
 
 async function start() {
+    document.getElementById("header").innerText = title;
+
     await getPostList();
-    await loadContent("https://raw.githubusercontent.com/DillonAd/DillonAd.github.io/master/Home.md");
+    await loadContent("Home", "https://raw.githubusercontent.com/DillonAd/DillonAd.github.io/master/Home.md");
 }
 
 async function getPostList() {
@@ -25,10 +36,11 @@ async function populatePostList(response) {
     const postList = document.getElementById("post-list");
 
     list.forEach(element => {
+        const linkName = element.name.replace(".md", "");
         const link = document.createElement("a");
-        link.href = "#";
-        link.innerText = element.name.replace(".md", "");
-        link.onclick = () => loadContent(element.download_url);
+        link.href = "#" + linkName;
+        link.innerText = linkName;
+        link.onclick = () => loadContent(linkName, element.download_url);
 
         const post = document.createElement("li");
         post.appendChild(link);
