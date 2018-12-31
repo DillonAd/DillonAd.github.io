@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ '/assets/css/main.css' | relative_url }}" />
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="body">
+            <div id="nav" class="body-col">
+                <ul id="post-list"></ul>
+            </div>
+            <div id="content" class="body-col">
+                {{ content }}
+            </div>
+        </div>
+    </body>
+</html>
