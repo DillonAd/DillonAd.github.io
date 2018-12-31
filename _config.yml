@@ -1,6 +1,10 @@
+highlighter: rouge
+markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
 paginate: 10
+theme: jekyll-theme-tactile
+title: DillonAd

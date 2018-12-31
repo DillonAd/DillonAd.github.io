@@ -1,18 +1,19 @@
 ---
-layout: default
+layout: page
 title: Home
 ---
 
 <div class="content">
     {% for post in paginator.posts %}
-
         <article>
             <h3>
                 <a href="{{ post.url }}">
                     {{ post.title }}
                 </a>
             </h3>
-            <h5>{{ post.date | date: "%m/%d/%Y" }}</h5>
+            
+            {{ post.date | date: "%m/%d/%Y" }}
+
             <p>{{ post.content | truncatewords: 50 }}</p>
         </article>
 
@@ -22,9 +23,9 @@ title: Home
         {% if paginator.total_pages > 1 %}
 
             {% if paginator.next_page %}
-                <a class=".next" href="{{ site.url }}/page{{ paginator.next_page }}/">Next</a>
+                <a class="next" href="{{ site.url }}/page{{ paginator.next_page }}/">Next</a>
             {% else %}
-                <span class=".next"></span>
+                <span class="next"></span>
             {% endif %}
 
         {% endif %}
@@ -36,6 +37,7 @@ title: Home
 
 <script type="text/javascript">
     $('.content').jscroll({
-        contentSelector: ".content"
+        contentSelector: ".content",
+        nextSelector: ".next"
     });
 </script>
