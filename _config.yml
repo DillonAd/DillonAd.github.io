@@ -1,0 +1,3 @@
+permalink: /blog/:year/:month/:day/:title
+plugins:
+  - jekyll-sitemap
