@@ -1,10 +1,22 @@
+github:
+  public: true
+  is_project_page: false
 highlighter: rouge
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 plugins:
+  - jekyll-feed
+  - jekyll-font-awesome-sass
+  - jekyll-mentions
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-feed
 paginate: 10
 theme: jekyll-theme-tactile
+sass:
+  sass_dir: _sass
+  style: compressed
 title: DillonAd
+twitter:
+  url: https://twitter.com/DillonThomasAd
+stack_overflow:
+  url: https://stackoverflow.com/users/7359614/dillon-adams
