@@ -1,4 +1,14 @@
 .social-link {
     color: black;
-    padding: 1em;
+    padding: .1em;
+}
+
+.right-25 {
+    float: right;
+    width: 25%;
+}
+
+.left-75 {
+    float: left;
+    width: 75%;
 }
