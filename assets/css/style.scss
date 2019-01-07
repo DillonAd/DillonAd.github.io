@@ -12,3 +12,11 @@ blockquote {
 ul {
     margin-left: 1em;
 }
+
+ul.list-no-icon li {
+    list-style-type: none;
+}
+
+ul.list-no-icon a:hover {
+    color:#d5000d;
+}
