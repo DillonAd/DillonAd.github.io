@@ -5,21 +5,26 @@ title: Home
 
 <div class="content">
     <i class="fa fa-snapchat"></i>
-    {% for post in paginator.posts %}
-        <article>
-            <h3>
-                <a href="{{ post.url }}">
-                    {{ post.title }}
-                </a>
-            </h3>
-            
-            {{ post.date | date: "%m/%d/%Y" }}
+    {% if paginator.total_posts > 0 %}
+        {% for post in paginator.posts %}
+            <article>
+                <h3>
+                    <a href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </h3>
+                
+                {{ post.date | date: "%m/%d/%Y" }}
 
-            <p>{{ post.content | truncatewords: 50 }}</p>
-            <a href="{{ post.url }}">Read more...</a>
-        </article>
+                <p>{{ post.content | truncatewords: 50 }}</p>
+                <a href="{{ post.url }}">Read more...</a>
+            </article>
 
-    {% endfor %}
+        {% endfor %}
+
+    {% else %}
+        <h1>Posts coming soon!</h1>
+    {% endif %}
 
     <div class="pagination">
         {% if paginator.total_pages > 1 %}
