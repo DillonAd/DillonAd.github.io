@@ -1,93 +1,14 @@
-html, body {
-    margin: 0; 
-    height: 100%; 
-    width: 100%;
-    background-color: #000;
-    color: #00FF00;
-    overflow: hidden;
+.social-link {
+    color: black;
+    padding: .1em;
 }
 
-input#consoleInput, input#consoleInput:focus, input#consoleInput:disabled {
-    width: 95%;
-    border: none;
-    outline: none;
-    background-color: #000;
-    color: inherit;
+.right-25 {
+    float: right;
+    width: 25%;
 }
 
-div#consoleInputBox span {
-    width: 5%;
-    padding-left: 1%;
-}
-
-div#console {
-    height: 97%;
-    overflow-y: hidden;
-    padding-left: 1%;
-    white-space: pre-wrap;
-}
-
-div#consoleInputBox {
-    width: 100%;
-    height: 3%;
-    margin-bottom:1%;
-}
-
-span#spacer, span#spacer input{
-    width: 100%;
-}
-
-div.contentModal {
-    opacity: 0;
-    position: fixed;
-    z-index: 1;
-    padding-top: 10%;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.1);
-}
-
-div.contentModal .contentView {
-    background-color: rgba(0,0,0,0.9);
-    margin: auto;
-    padding: 1%;
-    border: 1px solid #888;
-    width: 80%;
-    z-index: 2;
-    max-height: 50%;
-    overflow-y: auto;
-}
-
-div.contentModal .contentView::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,255,0,0.3);
-	background-color: #535353;
-}
-
-div.contentModal .contentView::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: #535353;
-}
-
-div.contentModal .contentView::-webkit-scrollbar-thumb
-{
-	background-color: #00FF00;
-}
-
-a {
-    color: #00FF00;
-}
-
-a:visited {
-    color: #888;
-}
-
-div.repoItem {
-    border-bottom: 1px solid #00FF00;
-    margin-bottom: 1%;
-    padding: 1%;
+.left-75 {
+    float: left;
+    width: 75%;
 }
