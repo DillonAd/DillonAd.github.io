@@ -25,7 +25,7 @@ After another hour or so of completely fruitless searches, I removed the EF4 key
 
 ## The Answer
 
-It turns out that neither EF4 nor .NET Core had anything to do with the issue. I had added the dependency of Entity Framework Core (EF Core) and as it turns out EF Core does not support the Database First approach, only the Code First approach. So after swapping EF Core for Entity Framework 6, everything was working as expected. :tada:
+It turns out that neither EF4 nor .NET Core had anything to do with the issue. I had added the dependency of Entity Framework Core (EF Core) and as it turns out EF Core does not support the Database First approach, only the Code First approach. So after swapping EF Core for Entity Framework 6, everything was working as expected.
 
 ## Lessons Learned
 
