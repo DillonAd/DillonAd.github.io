@@ -10,6 +10,7 @@ plugins:
   - jekyll-mentions
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jemoji
 paginate: 10
 theme: jekyll-theme-tactile
 sass:
