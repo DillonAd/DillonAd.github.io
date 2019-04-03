@@ -43,3 +43,7 @@ In the end, there are multiple use cases for this kind of solution. From new dev
  - [Working Example](https://github.com/DillonAd/docker4devs)
  - [Docker-Watch NuGet](https://www.nuget.org/packages/docker-watch) 
  - [Docker-Watch GitHub](https://github.com/nickvdyck/docker-watch)
+
+## Addendum
+
+An unexpected result of this post has be that a full tutorial has been requested, so I will be spending the next few posts detailing the intracacies, advantages, and shotcomings of this approach.
