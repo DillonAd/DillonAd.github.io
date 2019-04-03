@@ -46,4 +46,4 @@ In the end, there are multiple use cases for this kind of solution. From new dev
 
 ## Addendum
 
-An unexpected result of this post has be that a full tutorial has been requested, so I will be spending the next few posts detailing the intracacies, advantages, and shotcomings of this approach.
+An unexpected result of this post has been a request for a full tutorial, so I will be spending the next few posts detailing the intricacies, advantages, and shortcomings of this approach.
