@@ -13,7 +13,7 @@ The user story is a basic building block of most Agile-based systems. Over the y
 
 ### What User Story?
 
-No story was ever even created in the system. The requirements for this story have been communicated either verbally, written on a napkin, or someone assumed the team could telepathically extract the requirements from their mind Since development team typically won't have a telepath or psychic on staff, these stories are typically forgotten , only to be remembered after the next release when someone notices that their feature wasn't completed.
+No story was ever even created in the system. The requirements for this story have been communicated either verbally, written on a napkin, or someone assumed the team could telepathically extract the requirements from their mind. Since development team typically won't have a telepath or psychic on staff, these stories are typically forgotten until someone notices that their feature wasn't completed in the release like they expected.
 
 ### The Skeleton Story
 
@@ -29,7 +29,7 @@ Initially a simple story, yet "little" features keep getting added on. The mantr
 
 ---
 
-Each of these stories, created by well meaning users, are perpetuated by similar issues. Generally that issue is communication. This is why I am a big fan of writing user stories down. This way they can be seen by everyone and discussed without any ambiguity. If it isn't written down, it isn't getting done. If the users change their mind about what they want while testing the story, that is fine. The current story can be completed, and the new changes that are desired can go into a _NEW_ story. This serves two purposes: first it allows the development team to keep more accurate metrics and secondly it promotes a sense of accomplishment among the team. 
+Each of these stories are perpetuated by similar issues. Generally the issues revolve around communication. This is why I am a big fan of writing user stories down. This way they can be seen by everyone and discussed without any ambiguity. If it isn't written down, it isn't getting done. If the users change their mind about what they want while testing the story, that is fine. The current story can be completed, and the new changes that are desired can go into a _NEW_ story. This serves two purposes: first it allows the development team to keep more accurate metrics and secondly it promotes a sense of accomplishment among the team. 
 
 Sometimes teams are lucky enough to have someone whose job it is to gather this information and put it in whatever system the team uses. Sometimes it is up to the developers on the team to gather this information. It is in the developer's best interest to ensure that this information is gathered, agreed on, and persisted. So when asked where [Feature X] is, there is a better answer available than "I don't know" or worse "What is [Feature X]?". There will be a documented history of the feature and the requirements to complete that feature. 
 
