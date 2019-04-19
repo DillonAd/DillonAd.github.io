@@ -3,7 +3,7 @@ layout: post
 title: "Writing Good User Stories"
 category: [ agile ]
 tags: [ user story, acceptance criteria ]
-date: 2019-04-18
+date: 2019-04-19
 comments: true
 ---
 
