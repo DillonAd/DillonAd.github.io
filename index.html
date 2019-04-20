@@ -4,10 +4,9 @@ title: Home
 ---
 
 <div class="content">
-    <i class="fa fa-snapchat"></i>
     {% if paginator.total_posts > 0 %}
         {% for post in paginator.posts %}
-            <article>
+            <article onclick="window.location.href = '{{ post.url }}'">
                 <h3>
                     <a href="{{ post.url }}">
                         {{ post.title }}
