@@ -1,14 +1,9 @@
-const CACHE = "pwabuilder-offline-page";
+const CACHE = "codejanitor";
 const offlineFallbackPage = "offline.html";
 
 self.addEventListener("install", event => {
-  console.log("Installing PWA Event processing");
-
   event.waitUntil(
-    caches.open(CACHE).then(cache => {
-      console.log("Cached offline page during install");
-      return cache.add(offlineFallbackPage);
-    })
+    caches.open(CACHE).then(cache => cache.add(offlineFallbackPage))
   );
 });
 
@@ -20,14 +15,10 @@ self.addEventListener("fetch", event => {
   event.respondWith(
     fetch(event.request)
       .then(response => {
-        console.log("Adding page to offline cache: " + response.url);
         event.waitUntil(updateCache(event.request, response.clone()));
         return response;
       })
-      .catch(error => {
-        console.log("Network request failed. Serving content from cache: " + error);
-        return fromCache(event.request);
-      })
+      .catch(error => fromCache(event.request))
   );
 });
 
