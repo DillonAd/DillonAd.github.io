@@ -3,7 +3,7 @@
 title=$1
 now=$(date +'%Y-%m-%d')
 fileName=$now-$title
-filePath=./_drafts/$fileName.md
+filePath=./_posts/$fileName.md
 touch $filePath
 chmod 744 $filePath
 
