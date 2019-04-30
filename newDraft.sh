@@ -6,7 +6,7 @@ fileName=$now-$title
 
 currentDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 draftDirectory="$currentDirectory/_drafts"
-if [ ! -d "$draftDirectory" ]; then
+if [[ ! -d "$draftDirectory" ]]; then
   mkdir $draftDirectory
 fi
 
