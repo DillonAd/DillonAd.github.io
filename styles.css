@@ -113,3 +113,16 @@ footer {
 footer > p > a {
     text-decoration: underline;
 }
+
+pre {
+    padding: 1%;
+    background-color: #303030;
+    opacity: 0.8;
+}
+
+code {
+    color: #f2f2f2;
+    background-color: #303030;
+    opacity: 0.8;
+    padding: 0.25%
+}
