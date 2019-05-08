@@ -14,7 +14,7 @@ A few definitions first:
   - Image?
     - The image is a snapshot of the application or workload that is described in the Dockerfile. This will be the basis for the container.
   - Container?
-    - The container is the execution of the image snapshot. The Docker website says a container is "a standardized unit of software".
+    - The Docker website says a container is "a standardized unit of software". Personally I think of the container as the execution of the image snapshot. 
 
 Lets get started!
 
@@ -91,13 +91,15 @@ docker run --rm -it -p 5000:5000 --name {container-name} {image-name}
 
 This last command looks a lot more complicated than it actually is. It's purpose is to take the image that you just built, and run it as your container. I included the flags/options because they are the most common that I use. They are:
   - _-p_ : Map port
-    - This is a web API so it will be accessible via a port via HTTP. Since the container is self-contained, we have to tell it to map it's local port to the host (your machine). I am using port 5000 because it is the default for the .NET project being used.
+    - This is a web API so it will be accessible via a port via HTTP. Since the container is self-contained, we have to tell it to map it's local port to the host (your machine). I am using port 5000 because it is the default for the .NET project being used. If you would like the change the port on your machine (the Docker host) change the port number on the left of the `:` to your port of choice.
   - _-it_ : Interactive Mode!
     - Personally, I like seeing the console output of an application as it runs. This flag allows that, but will claim control of the current terminal/command window until the container is stopped (CTRL+C). Technically both the _i_ and the _t_ are two seperate flags, but in this use-case they should be used together. 
     - If you don't want to see the output or just want to retain control of the current window the _-d_ command can be used to enter _detached_ mode. To stop the container in detached mode, you will need to run `docker stop {container-name}`.
   - _--name_ : This sets the name of the container. This flag is completely optional, but makes things easier if you are running ing your container in _detached_ mode. If you forget this value or don't set it just run `docker ps` or `docker container list` to see all running containers.
   - _--rm_ : Remove the container after it exits
     - This is a housekeeping issue for me. Untagged images will be given a unique container tag name each time they are built. Each of these containers takes up space, so I like to destroy them once I'm finished. Since we are tagging the image here, this isn't strictly necessary.
+
+Now open a web browser and navigate to `http://localhost:5000/swagger`. Now you have a running container with an application running inside of it.
 
 **_Flawless Victory!_**
 
