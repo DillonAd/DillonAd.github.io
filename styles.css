@@ -105,6 +105,8 @@ article > h3 > a {
     color:#d5000d;
 }
 
+.post, .post-content { margin: 5vh 0vh 5vh 0vh; }
+
 footer {
     font-size: .9em;
     vertical-align: baseline;

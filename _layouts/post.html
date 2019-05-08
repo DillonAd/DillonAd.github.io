@@ -3,15 +3,13 @@ layout: default
 ---
 <a href="{{ site.url }}">&laquo; Back</a>
 
-<br /><br />
-
 <div class="post">
     {{ page.date | date: "%m/%d/%Y" }}
-    <br /><br />
-    {{ content }}
-
+    
+    <div class="post-content">
+        {{ content }}
+    </div>
     <hr>
-
     <blockquote>
         If you have any feedback, leave a commend below or put in a pull request on <a href="{{ site.repository_url }}">GitHub</a>
     </blockquote>
