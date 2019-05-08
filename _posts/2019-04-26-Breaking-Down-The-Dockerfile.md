@@ -38,7 +38,7 @@ In the above example, the image being called is the `dotnet` image tagged with `
 
 All of these images are available via [Docker Hub](https://hub.docker.com).
 
-### Where are we!?
+### Where are we?!
 
 ``` Dockerfile
 WORKDIR /app
@@ -46,7 +46,7 @@ WORKDIR /app
 
 Generally the working directory of most Linux OS images is the root directory (`/`). Since running applications from the root directory can be confusing and a potential security risk, this command will both create the directory and change the current directory for all future commands to this directory.
 
-### Copy All The Things!
+### COPY All The Things!
 
 ``` Dockerfile
 COPY . .
@@ -56,7 +56,7 @@ The next step is to copy over the files needed to build the image. The command a
 
 **Note both periods at the end of the command and the spacing. It is _very_ easy to miss.**
 
-### Prepare for Entry!
+### Prepare for Entry
 
 ``` Dockerfile
 ENTRYPOINT [ "dotnet", "run", "--urls", "http://0.0.0.0:5000" ]
