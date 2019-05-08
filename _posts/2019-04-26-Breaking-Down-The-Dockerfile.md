@@ -105,6 +105,8 @@ Now open a web browser and navigate to `http://localhost:5000/swagger`. Now you 
 
 **_Flawless Victory!_**
 
+If you have any trouble check out the `Dockerfile` branch in the [Demo App Repository](https://github.com/DillonAd/simple-api/tree/Dockerfile) to see a working version, or leave a comment!
+
 ### Resources
 
  - [Demo App](https://github.com/DillonAd/simple-api)
