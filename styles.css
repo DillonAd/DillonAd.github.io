@@ -48,9 +48,7 @@ hr {
     text-decoration: none;
 }
 
-.social-link > i.fa {
-    font-size: 1.75em;
-}
+.social-link > i.fa { font-size: 1.75em; }
 
 .header-item {
     flex: 1;
@@ -58,9 +56,7 @@ hr {
     vertical-align: middle;
 }
 
-.header-icons {
-    text-align: right;
-}
+.header-icons { text-align: right; }
 
 #main-content {
     grid-row: 2;
@@ -86,37 +82,29 @@ blockquote {
     padding: .1em .1em .1em 1em;
 }
 
-ul {
-    margin: 0%;
-}
+ul { margin: 0%; }
 
 .list-no-icon {
     list-style-type: none;
     padding: 0%;
 }
 
-ul.list-no-icon li {
-    list-style-type: none;
-}
+ul.list-no-icon li { list-style-type: none; }
 
-a:hover, 
-a:active, 
-article > h3 > a {
-    color:#d5000d;
-}
+a:hover, a:active, article > h3 > a { color:#d5000d; }
 
 .post, .post-content { margin: 5vh 0vh 5vh 0vh; }
 
 .post a { border-bottom: 1px solid #d5000d; }
+
+.post h1, h2, h3, h4, h5, h6 { color:#d5000d; }
 
 footer {
     font-size: .9em;
     vertical-align: baseline;
 }
 
-footer > p > a {
-    text-decoration: underline;
-}
+footer > p > a { text-decoration: underline; }
 
 pre {
     padding: 1%;
