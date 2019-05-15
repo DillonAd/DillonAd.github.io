@@ -20,3 +20,17 @@ stack_overflow:
 linkedin:
   url: www.linkedin.com/in/dillon-adams
 google_analytics: UA-121350757-1
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Dillon Adams"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
