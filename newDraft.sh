@@ -14,6 +14,9 @@ filePath=$draftDirectory/$fileName.md
 touch $filePath
 chmod 744 $filePath
 
+postFilePath="$currentDirectory/_posts/$fileName.md"
+ln $filePath $postFilePath
+
 echo --- >> $filePath
 echo layout: post >> $filePath
 echo title: $(echo $title | tr '-' ' ') >> $filePath
