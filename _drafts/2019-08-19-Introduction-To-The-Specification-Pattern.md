@@ -3,7 +3,7 @@ layout: post
 title: Introduction to the Specification Pattern
 category: [ design pattern, beginner ]
 tags: [ specification, design pattern, pattern, beginner ]
-date: 2019-07-11
+date: 2019-08-19
 ---
 
 Recently, I have been working my way through the [Gang of Four's Design Pattern Book](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented-dp-0201633612/dp/0201633612/ref=mt_hardcover?_encoding=UTF8&me=&qid=) and looking deeper into patterns that I can apply in my day to day work. I found the Specification pattern and really gravitated to the idea.
