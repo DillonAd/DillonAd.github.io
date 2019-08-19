@@ -202,7 +202,7 @@ public class StudentService
 }
 ```
 
-## Pitfalls
+# Pitfalls
 
 If the Specifications are too focused, they can only be used for the one case. On the other hand, if the specification is too broad a plethora of specifications will have to be composed to make a meaningful query which gains nothing except more complexity. Each use case will be different, but finding the right balance between these two extremes can yield massive benefits.
 
