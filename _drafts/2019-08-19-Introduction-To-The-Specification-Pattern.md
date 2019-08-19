@@ -32,7 +32,7 @@ This pattern allows query logic to be consolidated into named objects. Doing so 
 
 The big advantage of this approach for me is that I can not only name the logic, but I can compose the specifications to create easily readable code. 
 
-To put a cherry on top of all of this, these objects allow for completely isolated unit testing of the logic they contain. This mean I don't have to mock or fake an ORM, or worse stand up a real data store. The isolated nature makes these tests amazingly fast and reliable.
+To put a cherry on top of all of this, these objects allow for completely isolated unit testing of the logic they contain. This mean I don't have to mock or fake an ORM (Object-Relational Mapper), or worse stand up a real data store. The isolated nature makes these tests amazingly fast and reliable.
 
 # A Concrete Example
 
@@ -170,7 +170,7 @@ In this case, the benefit gained by introducing the specification is that if the
 
 # Combining Specifications
 
-Let's continue the previous example, and make the assumption that not all business logic can or should be contained in a single statement. As mentioned eariler, part of the power of the Specification pattern is the reusability of the Specifications, and that can make creating specifications of appropraite specificity quite difficult. The solution is to combine specifications so disaparate Specifications can be composed to create the business logic that is needed. Combining the Expressions in the Specifications (at least in C#) is quite an interesting thing to do, but it can be complicated so I ended up writing a library to make combining Specifications easier. That way the code from the previous example becomes:
+Let's continue the previous example, and make the assumption that not all business logic can or should be contained in a single statement. As mentioned earlier, part of the power of the Specification pattern is the reusability of the Specifications, and that can make creating specifications of appropriate specificity quite difficult. The solution is to combine specifications so disparate Specifications can be composed to create the business logic that is needed. Combining the Expressions in the Specifications (at least in C#) is quite an interesting thing to do, but it can be complicated so I ended up writing a library to make combining Specifications easier. That way the code from the previous example becomes:
 
 ```cs
 using EZSpecification;
@@ -208,4 +208,4 @@ If the Specifications are too focused, they can only be used for the one case. O
 
 # Conclusion
 
-In the end, there are many ways to acheive the same benefits the Specification pattern provides. That being said, I believe the Specification pattern provides the cleanest and most testable solution. With the combination of readability and testability, I truly believe that this pattern can be of great benefit to applications that utilize a lot of query logic.
+In the end, there are many ways to achieve the same benefits the Specification pattern provides. That being said, I believe the Specification pattern provides the cleanest and most testable solution. With the combination of readability and testability, I truly believe that this pattern can be of great benefit to applications that utilize a lot of query logic.
