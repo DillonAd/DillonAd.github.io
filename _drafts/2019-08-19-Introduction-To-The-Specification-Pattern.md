@@ -16,7 +16,7 @@ A specification is a query represented in an named object. Vague enough? Here is
 using System;
 using System.Linq.Expressions;
 
-public class ActiveStudentsSpec
+public class CurrentStudentsSpec
 {
   public Expression<Func<Student, bool>> Expression => 
     s => s.IsActive;
@@ -67,6 +67,7 @@ Using this specification, filtering the data becomes extraordinarily readable.
 
 ```cs
 using System.Collections.Generic;
+using System.Linq;
 
 public class StudentService
 {
@@ -89,6 +90,7 @@ The alternative being:
 
 ```cs
 using System.Collections.Generic;
+using System.Linq;
 
 public class StudentService
 {
@@ -110,6 +112,7 @@ Notice the difference? Almost none, right? In simple use cases, this pattern rea
 
 ```cs
 using System.Collections.Generic;
+using System.Linq;
 
 public class StudentService
 {
@@ -137,6 +140,7 @@ Now we have duplication! The risk of these two methods falling out of sync with 
 
 ```cs
 using System.Collections.Generic;
+using System.Linq;
 
 public class StudentService
 {
@@ -149,13 +153,13 @@ public class StudentService
 
   public IEnumerable<Student> GetPassingStudents()
   {
-    var passingStudents = new PassingStudentSpecification();
+    var passingStudents = new PassingStudentSpec();
     return _students.Where(passingStudents.Expression.Compile());
   }
 
   public IEnumerable<Student> GetCurrentPassingStudents()
   {
-    var passingStudents = new PassingStudentSpecification();
+    var passingStudents = new PassingStudentSpec();
     return _students.Where(passingStudents.Expression.Compile())
                     .Where(s => s.IsActive);
   }
@@ -171,6 +175,7 @@ Let's continue the previous example, and make the assumption that not all busine
 ```cs
 using EZSpecification;
 using System.Collections.Generic;
+using System.Linq;
 
 public class StudentService
 {
@@ -183,16 +188,16 @@ public class StudentService
 
   public IEnumerable<Student> GetPassingStudents()
   {
-    var passingStudents = new PassingStudentSpecification();
+    var passingStudents = new PassingStudentSpec();
     return _students.Where(passingStudents.Expression.Compile());
   }
 
   public IEnumerable<Student> GetCurrentPassingStudents()
   {
-    var passingStudents = new PassingStudentSpecification();
-    var currentStudents = new CurrentStudentSpecification();
+    var passingStudents = new PassingStudentSpec();
+    var currentStudents = new CurrentStudentSpec();
     
-    return _students.Where(passingStudents.And(currentStudents));)
+    return _students.Where(passingStudents.And(currentStudents));
   }
 }
 ```
