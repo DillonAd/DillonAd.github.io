@@ -7,10 +7,15 @@ body {
     padding-left: 10%;
     padding-right: 10%;
 
-    ul {
-        margin-left: 1vw;
+    ul { margin-left: 1vw; }
+    
+    ul.list-no-icon {
+        margin-left: 0;
 
-        .list-no-icon li { list-style-type: none; }
+        li {
+            list-style-type: none;
+            padding-left: 0;
+        }
     }
 
     header {
