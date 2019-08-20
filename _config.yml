@@ -12,6 +12,10 @@ plugins:
   - jekyll-seo-tag
   - jemoji
 paginate: 10
+theme: jekyll-theme-tactile
+sass:
+  sass_dir: _sass
+  style: compressed
 title: DillonAd
 twitter:
   url: https://twitter.com/DillonThomasAd
