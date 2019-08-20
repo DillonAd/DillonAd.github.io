@@ -209,3 +209,7 @@ If the Specifications are too focused, they can only be used for the one case. O
 # Conclusion
 
 In the end, there are many ways to achieve the same benefits the Specification pattern provides. That being said, I believe the Specification pattern provides the cleanest and most testable solution. With the combination of readability and testability, I truly believe that this pattern can be of great benefit to applications that utilize a lot of query logic.
+
+# Resources
+- [Gang of Four's Design Pattern Book](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented-dp-0201633612/dp/0201633612/ref=mt_hardcover?_encoding=UTF8&me=&qid=)
+- [EZSpecification Library](https://github.com/DillonAd/EZSpecification)
