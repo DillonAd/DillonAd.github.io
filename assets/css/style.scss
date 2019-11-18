@@ -22,7 +22,9 @@ body {
         grid-column: 2;
         grid-row: 1;
         display: flex;
-        margin-bottom: 1%;
+        
+        margin-bottom: 0;
+        padding-bottom: 0;
 
         a:hover { color:#373D3F; }
 
@@ -53,12 +55,30 @@ body {
     }
 
     .header-icons { text-align: right; }
-    
+
+    .content {
+        article {
+            margin-bottom: 1%;
+
+            .read-more {
+                padding: 0vh 1vw;
+            }
+        }
+    }
+
+    .post {
+        margin-top: 1vh;
+        
+        .post-content { margin-top: 1vh; }
+    }
+
     #post-footer { margin-bottom: 5vh; }
 
     footer {
         background: none;
-    
+        margin: 0;
+        padding-top: 0;
+
         a:hover { color:#373D3F; }
 
         a { 
