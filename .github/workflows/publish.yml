@@ -14,15 +14,7 @@ jobs:
         github-token: ${{github.token}}
         debug: false
         script: |
-          const fs = require('fs');
-          
-          const files = github.pulls.listFiles({
-            'DillonAd',
-            'DillonAd.github.io',
-            27
-          });
-          
-          fs.writeFileSync("${HOME}/files", files);
+          console.log('hi');
 
     - name: Publish articles 
       uses: tylerauerbeck/publish-to-dev.to-action@master
