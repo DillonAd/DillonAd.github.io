@@ -13,7 +13,7 @@ jobs:
     - name: GitHub Script
       uses: actions/github-script@0.3.0
       with:
-        github-token: ${{GITHUB_TOKEN}}
+        github-token: ${{github.token}}
         debug: false
         script: |
           console.log(process.env);
