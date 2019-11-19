@@ -14,9 +14,10 @@ jobs:
         github-token: ${{github.token}}
         debug: false
         script: |
-          const files = github.pulls.listFiles({ owner: 'DillonAd', repo: 'DillonAd.github.io', pull_number: 27 });
-          console.log('files', files);
-          
+          const files = github.pulls.listFiles({ owner: 'DillonAd', repo: 'DillonAd.github.io', pull_number: 27 }).then(resp => {
+            console.log('files', files);
+          });
+
     - name: Publish articles 
       uses: tylerauerbeck/publish-to-dev.to-action@master
       env:
