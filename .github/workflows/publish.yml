@@ -14,8 +14,16 @@ jobs:
         github-token: ${{github.token}}
         debug: false
         script: |
-          const files = github.pulls.listFiles({ owner: 'DillonAd', repo: 'DillonAd.github.io', pull_number: 27 }).then(resp => { 
-            console.log('files', resp); 
+          const fs = require('fs');
+          const files = github.pulls.listFiles({ 
+            owner: 'DillonAd', 
+            repo: 'DillonAd.github.io', 
+            pull_number: 27 }).then(resp => { 
+              console.log('files', resp); 
+              var filenames = resp.data.flatMap(f => f.filename)
+                                       .reduce((f1, f2) => `${f1}\n${f2}`);
+
+              fs.writeFileSync("${HOME}/files", filenames);
           });
 
     - name: Publish articles 
