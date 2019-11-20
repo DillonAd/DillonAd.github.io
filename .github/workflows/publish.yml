@@ -22,7 +22,7 @@ jobs:
               console.log('files', resp); 
               var filenames = resp.data.flatMap(f => f.filename)
                                        .reduce((f1, f2) => `${f1}\n${f2}`);
-              console.log('filenames', filesnames);
+              console.log('filenames', filenames);
               console.log('making directory');
               fs.mkdirSync("/home/github", { recursive: true });
               console.log('writing file');
