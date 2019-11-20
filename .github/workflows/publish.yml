@@ -19,13 +19,9 @@ jobs:
             owner: 'DillonAd', 
             repo: 'DillonAd.github.io', 
             pull_number: 27 }).then(resp => { 
-              console.log('files', resp); 
               var filenames = resp.data.flatMap(f => f.filename)
                                        .reduce((f1, f2) => `${f1}\n${f2}`);
-              console.log('filenames', filenames);
-              //console.log('making directory');
-              //fs.mkdirSync("/home/github", { recursive: true });
-              console.log('writing file', `${process.env.HOME}/files`);
+
               fs.writeFileSync(`${process.env.HOME}/files`, filenames);
           });
 
@@ -33,4 +29,4 @@ jobs:
       uses: tylerauerbeck/publish-to-dev.to-action@master
       env:
         DEV_TO_TOKEN: ${{ secrets.DEV_TO_TOKEN }}
-        PR_LIST_FILE: ${HOME}/files
+        PR_LIST_FILE: ${{ HOME }}/files
