@@ -22,11 +22,11 @@ jobs:
               var filenames = resp.data.flatMap(f => f.filename)
                                        .reduce((f1, f2) => `${f1}\n${f2}`);
 
-              fs.writeFileSync(`${process.env.HOME}/files`, filenames);
+              fs.writeFileSync(`/github/workspace/files`, filenames);
           });
 
     - name: Publish articles 
       uses: tylerauerbeck/publish-to-dev.to-action@master
       env:
         DEV_TO_TOKEN: ${{ secrets.DEV_TO_TOKEN }}
-        PR_LIST_FILE: /home/runner/files
+        PR_LIST_FILE: /github/workspace/files
