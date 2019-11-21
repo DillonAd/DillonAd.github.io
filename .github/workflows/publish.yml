@@ -30,4 +30,4 @@ jobs:
       uses: tylerauerbeck/publish-to-dev.to-action@master
       env:
         DEV_TO_TOKEN: ${{ secrets.DEV_TO_TOKEN }}
-        PR_LIST_FILE: ${{ GITHUB_WORKSPACE }}
+        PR_LIST_FILE: ${{ env.GITHUB_WORKSPACE }}
