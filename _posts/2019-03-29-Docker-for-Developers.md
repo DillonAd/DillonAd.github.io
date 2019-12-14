@@ -26,9 +26,9 @@ The Microsoft SQL Server container runs pretty much as-is with the settings requ
 
 The Angular and .Net Core container declarations specify one thing different from the Microsoft SQL Server container declaration. The difference is the `volumes` element in the `docker-compose.yml` YAML configuration. This allows the containers' file system to reflect the local file system specified ( - `local path`:`container path` ). This way the `watch` commands can see the changes and respond appropriately.
 
-> _Windows Users_
->
-> There is one small caveat for Windows users. There is a known limitation that does not allow file change  events to be seen by the container. That renders this solution pretty much useless. Luckily the Open Source community came through! A tool was developed and published called `docker-watch` (Links available in the Resources section) and it is available via the `dotnet tool` ecosystem. (There are other implementations in other languages, but I haven't used them and therefore can't recommend any of those solutions)
+_Windows Users_
+
+_There is one small caveat for Windows users. There is a known limitation that does not allow file change  events to be seen by the container. That renders this solution pretty much useless. Luckily the Open Source community came through! A tool was developed and published called `docker-watch` (Links available in the Resources section) and it is available via the `dotnet tool` ecosystem. (There are other implementations in other languages, but I haven't used them and therefore can't recommend any of those solutions)_
 
 ## Conclusion
 
