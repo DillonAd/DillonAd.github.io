@@ -26,12 +26,20 @@ body {
         margin-bottom: 0;
         padding-bottom: 0;
 
-        a:hover { color:#373D3F; }
+        // a:hover { color:#373D3F; }
 
         a { 
             padding: .1em; 
             color:#373D3F;
             &:hover { color: #D5000D; }
+
+            @media only screen and (max-width: 450px) {
+                i.fa-2x { font-size: 1.5em; }
+            }
+
+            @media only screen and (max-width: 350px) {
+                i.fa-2x { font-size: 1.25em; }
+            }
         }
     }
 

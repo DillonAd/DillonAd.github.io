@@ -23,6 +23,8 @@ stack_overflow:
   url: https://stackoverflow.com/users/7359614/dillon-adams
 linkedin:
   url: www.linkedin.com/in/dillon-adams
+dev:
+  url: https://dev.to/dillonad
 google_analytics: UA-121350757-1
 defaults:
   -
