@@ -3,9 +3,13 @@
 
 @import "{{ site.theme }}";
 
+$text: #4A4A4A;
+$link: #D5000D;
+$center-margin: 10%;
+
 body {
-    padding-left: 10%;
-    padding-right: 10%;
+    font-display: fallback;
+    color: $text;
 
     ul { margin-left: 1vw; }
     
@@ -18,64 +22,97 @@ body {
         }
     }
 
-    header {
-        grid-column: 2;
-        grid-row: 1;
-        display: flex;
-        
-        margin-bottom: 0;
-        padding-bottom: 0;
+    .nav-bar {
+        background-color: $link;
+    }
 
-        a { 
-            padding: .1em; 
-            color:#373D3F;
-            &:hover { color: #D5000D; }
+    .body {
+        padding: 0% $center-margin 0% $center-margin;
+    
+        header {
+            display: flex;
+            
+            margin-bottom: 0;
+            padding-bottom: 0;
 
-            @media only screen and (max-width: 450px) {
-                i.fa-2x { font-size: 1.5em; }
+            a { 
+                padding: .1em; 
+                color:$text;
+                &:hover { color: $link; }
+
+                @media only screen and (max-width: 450px) {
+                    i.fa-2x { font-size: 1.5em; }
+                }
+
+                @media only screen and (max-width: 350px) {
+                    i.fa-2x { font-size: 1.25em; }
+                }
             }
 
-            @media only screen and (max-width: 350px) {
-                i.fa-2x { font-size: 1.25em; }
+            nav {
+                margin: 1vh 0vh;
+                display: flex;
+                justify-content: start;
+
+                .nav-item {
+                    padding: 1px 0px;
+
+                    &.selected {
+                        border-top: 1px solid $text;
+                        border-bottom: 1px solid $text;
+                        padding: 0px 0px;
+                    }
+
+                    &:hover {
+                        border-top: 1px solid $link;
+                        border-bottom: 1px solid $link;
+                        padding: 0px 0px;
+                    }
+                }
+
+                .nav-item-separator {
+                    margin: 0vh 1vw;
+                    opacity: .25;
+                }
             }
         }
-    }
 
-    #header {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        justify-content: center;
-        align-content: center;
-    }
+        #header {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: center;
+            align-content: center;
+        }
 
-    #header-top {
-        display: flex;
-        flex-direction: row;
-    }
+        #header-top {
+            display: flex;
+            flex-direction: row;
+        }
 
-    .header-item {
-        flex: 1;
-        margin: auto;
-        vertical-align: middle;
-    }
+        .header-item {
+            flex: 1;
+            margin: auto;
+            vertical-align: middle;
+        }
 
-    .header-icons { text-align: right; }
+        .header-icons { text-align: right; }
 
-    .content {
-        article {
-            margin-bottom: 1%;
+        .content {
+            article {
+                margin-bottom: 1%;
 
-            .read-more {
-                padding: 0vh 1vw;
+                .read-more {
+                    padding: 0vh 1vw;
+                }
+
+                .post {
+                    margin-top: 1vh;
+                    
+                    .post-content { margin-top: 1vh; }
+                }
             }
         }
-    }
-
-    .post {
-        margin-top: 1vh;
-        
-        .post-content { margin-top: 1vh; }
     }
 
     footer {
@@ -83,12 +120,12 @@ body {
         margin: 0;
         padding-top: 0;
 
-        a:hover { color:#373D3F; }
+        a:hover { color: $text; }
 
         a { 
             padding: .1em; 
-            color:#373D3F;
-            &:hover { color: #D5000D; }
+            color:$text;
+            &:hover { color: $link; }
         }
     }
 }
