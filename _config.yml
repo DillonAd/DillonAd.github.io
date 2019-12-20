@@ -17,25 +17,47 @@ sass:
   sass_dir: _sass
   style: compressed
 title: DillonAd
-twitter:
-  url: https://twitter.com/DillonThomasAd
-stack_overflow:
-  url: https://stackoverflow.com/users/7359614/dillon-adams
-linkedin:
-  url: www.linkedin.com/in/dillon-adams
-dev:
-  url: https://dev.to/dillonad
-google_analytics: UA-121350757-1
+links:
+  - site:
+      url: https://github.com/DillonAd
+      icon: fa-github
+      description: GitHub
+      a11y_label: GitHub
+  - site:
+      url: https://twitter.com/DillonThomasAd
+      icon: fa-twitter
+      description: Twitter
+      a11y_label: Twitter
+  - site:
+      url: https://stackoverflow.com/users/7359614/dillon-adams
+      icon: fa-stack-overflow
+      description: StackOverflow
+      a11y_label: StackOverflow
+  - site:
+      url: www.linkedin.com/in/dillon-adams
+      icon: fa-linkedin
+      description: LinkedIn
+      a11y_label: LinkedIn
+  - site:
+      url: https://dev.to/dillonad
+      icon: fa-dev
+      description: Dev
+      a11y_label: Dev.to
+navigation:
+  - page:
+      name: Home
+      link: /
+  # - page:
+  #     name: About Me
+  #     link: /AboutMe
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
       author: "Dillon Adams"
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
