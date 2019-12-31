@@ -15,44 +15,46 @@
   </head>
   <body>
     <div class="nav-bar">
-
+      <div class="nav-bar-item">
+        <div class="pages">
+          <a href="/">
+            <img src="favicon.ico" class="logo" alt="Site Logo"></img>
+          </a>
+          {% if site.navigation.size > 1 %}
+            {% for nav in site.navigation %}
+              <a href="{{ nav.page.link }}" 
+                class="nav-item{% if nav.page.link == page.url %} selected{%endif%}">
+                  {{ nav.page.name }}
+              </a>
+              {% if forloop.last != true %}
+                <span class="nav-item-separator">|</span>
+              {% endif %}
+            {%endfor%}
+          {% endif %}
+        </div>
+      </div>
+      <div class="nav-bar-item icons">
+        {% for link in site.links %}
+          <a href="{{ link.site.url }}" 
+            class="social-link" 
+            target="_blank" 
+            data-message="{{ link.site.a11y_label }}" 
+            aria-label="{{ link.site.a11y_label }}" 
+            rel="noopener">
+            <i class="fab {{ link.site.icon }} fa-2x"></i>
+          </a>
+        {% endfor %}
+      </div>
     </div>
     <div class="body">
-      <header id="header">
-        <div id="header-top">
-          <div class="header-item">
-            <h1>
-              {{ page.title }}
-            </h1>
-            <p>{{ page.description }}</p>
-          </div>
-          <div class="header-item header-icons">
-            <p>
-              {% for link in site.links %}
-                <a href="{{ link.site.owner_url }}" 
-                  class="social-link" 
-                  target="_blank" 
-                  data-message="{{ link.site.a11y_label }}" 
-                  aria-label="{{ link.site.a11y_label }}" 
-                  rel="noopener">
-                  <i class="fab {{ link.site.icon }} fa-2x"></i>
-                </a>
-              {% endfor %}
-            </p>
-          </div>
+      <header>
+        <div class="header-item">
+          <h1>
+            {{ page.title }}
+          </h1>
+          <p>{{ page.description }}</p>
         </div>
-        <nav>
-          <!-- {% for nav in site.navigation %}
-            <a href="{{ nav.page.link }}" 
-              class="nav-item{% if nav.page.link == page.url %} selected{%endif%}">
-                {{ nav.page.name }}
-            </a>
-            {% if forloop.last != true %}
-              <span class="nav-item-separator">|</span>
-            {% endif %}  
-          {%endfor%} -->
-        </nav>
-        <div>
+        <div class="header-item">
           <hr />
         </div>
       </header>
@@ -65,7 +67,7 @@
           <ul class="list-no-icon">
             {% for link in site.links %}
               <li>
-                <a href="{{ link.site.owner_url }}"
+                <a href="{{ link.site.url }}"
                   class="social-link fab {{ link.site.icon }} fa-lg"
                   target="_blank"
                   data-message="{{ link.site.a11y_label }}"

@@ -23,80 +23,84 @@ body {
     }
 
     .nav-bar {
-        background-color: $link;
-    }
+        background-color: #303030;
+        max-height: 8vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
 
-    .body {
-        padding: 0% $center-margin 0% $center-margin;
-    
-        header {
-            display: flex;
-            
-            margin-bottom: 0;
-            padding-bottom: 0;
+        .nav-bar-item {
+            flex: 1;
+            padding: 0vh 2vw;
+            max-height: inherit;
 
             a { 
-                padding: .1em; 
-                color:$text;
+                padding: .2em; 
+                color: #FFF;
+                margin-top: auto;
+                margin-bottom: auto;
                 &:hover { color: $link; }
-
-                @media only screen and (max-width: 450px) {
-                    i.fa-2x { font-size: 1.5em; }
-                }
-
-                @media only screen and (max-width: 350px) {
-                    i.fa-2x { font-size: 1.25em; }
-                }
             }
 
-            nav {
-                margin: 1vh 0vh;
+            .pages {
+                flex: 1;
                 display: flex;
-                justify-content: start;
+                max-height: inherit;
+                font-weight: 500;
+                font-size: 1em;
 
-                .nav-item {
-                    padding: 1px 0px;
+                a {
+                    margin: 0vh 0vw;
+                    padding: 0vh 0vw;
+                    max-height: inherit;
 
-                    &.selected {
-                        border-top: 1px solid $text;
-                        border-bottom: 1px solid $text;
-                        padding: 0px 0px;
-                    }
-
-                    &:hover {
-                        border-top: 1px solid $link;
-                        border-bottom: 1px solid $link;
-                        padding: 0px 0px;
+                    .logo {
+                        max-height: inherit;
+                        object-fit: contain;
                     }
                 }
 
                 .nav-item-separator {
-                    margin: 0vh 1vw;
-                    opacity: .25;
+                    margin: auto 1vw;
+                }
+            }
+
+            & + .icons {
+                text-align: right;
+
+                a, i {
+                    margin-top: auto;
+                    margin-bottom: auto;
                 }
             }
         }
+    }
 
-        #header {
+    .body {
+        .me {
+            max-height: 30vh;
+            margin-right: 1vw;
+            border-radius: 50%;
+            float: left;
+        }
+
+        padding: 0% $center-margin 0% $center-margin;
+    
+        header {
             display: flex;
             flex-direction: column;
             flex: 1;
             justify-content: center;
             align-content: center;
-        }
+            
+            margin-bottom: 0;
+            padding-bottom: 0;
 
-        #header-top {
-            display: flex;
-            flex-direction: row;
+            .header-item {
+                flex: 1;
+                width: 100%;
+            }
         }
-
-        .header-item {
-            flex: 1;
-            margin: auto;
-            vertical-align: middle;
-        }
-
-        .header-icons { text-align: right; }
 
         .content {
             article {
@@ -126,6 +130,66 @@ body {
             padding: .1em; 
             color:$text;
             &:hover { color: $link; }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    body {
+        .nav-bar {
+            .nav-bar-item {
+                & + .icons {
+                    i.fa-2x { font-size: 1.5em; }
+                }
+            }
+        }
+        
+        .body {
+            header {
+                text-align: center;
+            }
+
+            #main-content {
+                p.me-container {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    
+                    img.me {
+                        float: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    body {
+        .nav-bar {
+            .nav-bar-item {
+                & + .icons {
+                    i.fa-2x { font-size: 1.25em; }
+                }
+            }
+        }
+
+        .body {
+            header {
+                text-align: center;
+            }
+
+            #main-content {
+                p.me-container {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    
+                    img.me {
+                        float: none;
+                    }
+                }
+            }
         }
     }
 }
