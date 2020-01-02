@@ -34,7 +34,7 @@ links:
       description: StackOverflow
       a11y_label: StackOverflow
   - site:
-      url: www.linkedin.com/in/dillon-adams
+      url: https://www.linkedin.com/in/dillon-adams
       icon: fa-linkedin
       description: LinkedIn
       a11y_label: LinkedIn
@@ -45,10 +45,10 @@ links:
       a11y_label: Dev.to
 navigation:
   - page:
-      name: Home
+      name: Blog
       link: /
   # - page:
-  #     name: About Me
+  #     name: About
   #     link: /AboutMe
 defaults:
   - scope:
