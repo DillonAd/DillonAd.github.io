@@ -15,7 +15,6 @@ paginate: 10
 theme: jekyll-theme-tactile
 sass:
   sass_dir: _sass
-  style: compressed
 title: DillonAd
 links:
   - site:
