@@ -28,6 +28,8 @@ body {
         width: 100%;
         display: flex;
         align-items: center;
+        position: sticky;
+        top: 0;
 
         .nav-bar-item {
             flex: 1;
@@ -77,14 +79,14 @@ body {
     }
 
     .body {
+        padding: 0% $center-margin;
+
         .me {
             max-height: 30vh;
             margin-right: 1vw;
             border-radius: 50%;
             float: left;
         }
-
-        padding: 0% $center-margin 0% $center-margin;
     
         header {
             display: flex;
@@ -116,20 +118,33 @@ body {
                     .post-content { margin-top: 1vh; }
                 }
             }
+
+            .pagination {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1vh;
+                
+                .pagination-item {
+                    flex: none;
+                    padding: 0vh 1vw;
+                }
+            }
         }
     }
 
     footer {
-        background: none;
+        background-color: #000;
         margin: 0;
-        padding-top: 0;
+        padding: 5vh $center-margin;
 
-        a:hover { color: $text; }
-
-        a { 
-            padding: .1em; 
-            color:$text;
-            &:hover { color: $link; }
+        .footer {
+            color: #FFF;
+            
+            a { 
+                padding: .1em; 
+                color: #FFF;
+                &:hover { color: $link; }
+            }
         }
     }
 }
