@@ -3,7 +3,8 @@
 
 @import "{{ site.theme }}";
 
-$text: #4A4A4A;
+$text: #2E343B;
+$meta-text: #FFF;
 $link: #D5000D;
 $center-margin: 10%;
 
@@ -38,7 +39,7 @@ body {
 
             a { 
                 padding: .2em; 
-                color: #FFF;
+                color: $meta-text;
                 margin-top: auto;
                 margin-bottom: auto;
                 &:hover { color: $link; }
@@ -59,6 +60,20 @@ body {
                     .logo {
                         max-height: inherit;
                         object-fit: contain;
+                    }
+                }
+
+                a.nav-item {
+                    margin: auto 1vw;
+
+                    &.selected {
+                        border-top: 1px solid $meta-text;
+                        border-bottom: 1px solid $meta-text;
+
+                        &:hover {
+                            border-top-color: $link;
+                            border-bottom-color: $link;
+                        }
                     }
                 }
 
@@ -123,7 +138,7 @@ body {
                 display: flex;
                 justify-content: center;
                 margin-bottom: 1vh;
-                
+
                 .pagination-item {
                     flex: none;
                     padding: 0vh 1vw;
@@ -138,11 +153,11 @@ body {
         padding: 5vh $center-margin;
 
         .footer {
-            color: #FFF;
+            color: $meta-text;
             
             a { 
                 padding: .1em; 
-                color: #FFF;
+                color: $meta-text;
                 &:hover { color: $link; }
             }
         }
