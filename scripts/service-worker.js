@@ -1,5 +1,5 @@
 const CACHE = "codejanitor";
-const offlineFallbackPage = "offline.html";
+const offlineFallbackPage = "/offline.html";
 
 self.addEventListener("install", event => {
   event.waitUntil(
