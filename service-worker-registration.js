@@ -1,6 +1,6 @@
 const register = () => {
   if ("serviceWorker" in navigator && !(navigator.serviceWorker || {}).controller) {
-    navigator.serviceWorker.register("scripts/service-worker.js", { scope: "./" });
+    navigator.serviceWorker.register("service-worker.js", { scope: "./" });
   }
 };
 
