@@ -162,7 +162,10 @@ body {
             a { 
                 padding: .1em; 
                 color: $meta-text;
-                &:hover { color: $link; }
+                &:hover { 
+                    color: $link;
+                    text-shadow: 0 1px 0 $link;
+                }
             }
         }
     }
