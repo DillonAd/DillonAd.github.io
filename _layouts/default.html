@@ -26,9 +26,6 @@
                 class="nav-item{% if nav.page.link == page.url %} selected{%endif%}">
                   {{ nav.page.name }}
               </a>
-              {% if forloop.last != true %}
-                <span class="nav-item-separator">|</span>
-              {% endif %}
             {%endfor%}
           {% endif %}
         </div>
@@ -51,8 +48,9 @@
         <div class="header-item">
           <h1>
             {{ page.title }}
-          </h1>
+          </h1>   
           <p>{{ page.description }}</p>
+          <p>{{ page.date | date: "%m/%d/%Y" }}</p>
         </div>
         <div class="header-item">
           <hr />

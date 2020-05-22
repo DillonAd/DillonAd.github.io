@@ -43,8 +43,8 @@ body {
                 color: $meta-text;
                 margin-top: auto;
                 margin-bottom: auto;
-                &:hover { 
-                    color: $link; 
+                &:hover {
+                    color: $link;
                     text-shadow: 0 1px 0 $link;
                 }
             }
@@ -69,20 +69,20 @@ body {
 
                 a.nav-item {
                     margin: auto 1vw;
+                    padding: 0vh .25vw;
+                    font-size: 1.1em;
+                    font-weight: 250;
 
                     &.selected {
-                        border-top: 1px solid $meta-text;
-                        border-bottom: 1px solid $meta-text;
+                        color: $link;
+                        text-shadow: 0 1px 0 $link;
 
                         &:hover {
-                            border-top-color: $link;
-                            border-bottom-color: $link;
+                            color: $meta-text;
+                            text-shadow: 0 1px 0 $meta-text;
+
                         }
                     }
-                }
-
-                .nav-item-separator {
-                    margin: auto 1vw;
                 }
             }
 
@@ -102,9 +102,12 @@ body {
 
         .me {
             max-height: 30vh;
-            margin-right: 1vw;
+            margin-right: 2vw;
+            margin-bottom: 1vh;
             border-radius: 50%;
             float: left;
+            shape-outside: circle(50%);
+
         }
     
         header {
@@ -123,18 +126,20 @@ body {
             }
         }
 
+        blockquote {
+            border-left-color: #696969
+        }
+
         .content {
             article {
-                margin-bottom: 1%;
+                margin-bottom: 1vh;
 
                 .read-more {
                     padding: 0vh 1vw;
                 }
 
                 .post {
-                    margin-top: 1vh;
-                    
-                    .post-content { margin-top: 1vh; }
+                    margin-top: 2vh;
                 }
             }
 
@@ -187,14 +192,8 @@ body {
             }
 
             #main-content {
-                p.me-container {
-                    width: 100%;
-                    display: block;
-                    text-align: center;
-                    
-                    img.me {
-                        float: none;
-                    }
+                img.me {
+                    max-width: 30vw;
                 }
             }
         }
@@ -217,14 +216,8 @@ body {
             }
 
             #main-content {
-                p.me-container {
-                    width: 100%;
-                    display: block;
-                    text-align: center;
-                    
-                    img.me {
-                        float: none;
-                    }
+                img.me {
+                    max-width: 30vw;
                 }
             }
         }

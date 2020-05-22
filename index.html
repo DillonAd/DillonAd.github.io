@@ -8,7 +8,7 @@ title: Blog
         {% for post in paginator.posts %}
             <article onclick="window.location.href = '{{ post.url }}'">
                 <h3>
-                    <a href="{{ post.url }}">
+                    <a class="post-title" href="{{ post.url }}">
                         {{ post.title }}
                     </a>
                 </h3>
