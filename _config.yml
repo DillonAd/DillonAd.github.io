@@ -46,9 +46,9 @@ navigation:
   - page:
       name: Blog
       link: /
-  # - page:
-  #     name: About
-  #     link: /AboutMe
+  - page:
+      name: About
+      link: /AboutMe
 defaults:
   - scope:
       path: ""
