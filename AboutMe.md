@@ -14,3 +14,14 @@ Hello! My name is Dillon and I am a software engineer currently located in Tulsa
 Recently I have been having a blast diving into Linux, Docker, Kubernetes, Golang, and NodeJS. I have also been trying to practice my writing skills by adding to this blog!
 
 Outside of tech, I enjoy riding my bicycle, reading books, and playing puzzle/strategy games with friends.
+
+<div style="display:flex;justify-content:center;flex-direction:column;text-align:center; margin-bottom:1vh">
+    <div>
+        Check out my resume!
+    </div>
+    <div>
+        <a href="/assets/pdf/Resume.pdf" target="_blank">
+            <i class="fa fa-3x fa-file"></i>
+        </a>
+    </div>
+</div>
