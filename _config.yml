@@ -28,6 +28,11 @@ links:
       description: Twitter
       a11y_label: Twitter
   - site:
+      url: https://techhub.social/@dillonadams
+      icon: fa-brands fa-mastodon
+      description: Mastadon
+      a11y_label: Mastadom
+  - site:
       url: https://stackoverflow.com/users/7359614/dillon-adams
       icon: fa-stack-overflow
       description: StackOverflow
