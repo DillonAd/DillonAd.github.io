@@ -3,7 +3,7 @@ layout: post
 title: Versions Are For Humans
 category: [deployment, packaging, software, version]
 tags: [deployment, packaging, software, semantic, version, semantic version, human, engineer]
-date: 2023-06-13
+date: 2023-07-06
 ---
 
 What does it mean to version a piece of software? I believe that it applies a _meaningful_ label to indicate the capabilities of the software at that point in time. As software engineers, the most common method of doing this is [semantic versioning](https://semver.org/). Each number in a semantic version conveys a meaning for a human to understand and use as a basis their decisions. 
