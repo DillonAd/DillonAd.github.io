@@ -23,11 +23,6 @@ links:
       description: GitHub
       a11y_label: GitHub
   - site:
-      url: https://twitter.com/DillonThomasAd
-      icon: fa-twitter
-      description: Twitter
-      a11y_label: Twitter
-  - site:
       url: https://techhub.social/@dillonadams
       icon: fa-brands fa-mastodon
       description: Mastadon
