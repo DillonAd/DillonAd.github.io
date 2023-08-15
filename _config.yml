@@ -23,7 +23,7 @@ links:
       description: GitHub
       a11y_label: GitHub
   - site:
-      url: https://techhub.social/@dillonadams
+      url: https://hachyderm.io/@DillonAd
       icon: fa-brands fa-mastodon
       description: Mastadon
       a11y_label: Mastadom
