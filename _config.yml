@@ -26,7 +26,7 @@ links:
       url: https://hachyderm.io/@DillonAd
       icon: fa-brands fa-mastodon
       description: Mastadon
-      a11y_label: Mastadom
+      a11y_label: Mastadon
   - site:
       url: https://stackoverflow.com/users/7359614/dillon-adams
       icon: fa-stack-overflow
@@ -42,6 +42,11 @@ links:
       icon: fa-dev
       description: Dev
       a11y_label: Dev.to
+  - site:
+      url: /feed.xml
+      icon: fa fa-rss
+      description: RSS
+      a11y_label: RSS
 navigation:
   - page:
       name: Blog
