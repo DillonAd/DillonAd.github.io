@@ -25,8 +25,8 @@ links:
   - site:
       url: https://hachyderm.io/@DillonAd
       icon: fa-brands fa-mastodon
-      description: Mastadon
-      a11y_label: Mastadon
+      description: Mastodon
+      a11y_label: Mastodon
   - site:
       url: https://stackoverflow.com/users/7359614/dillon-adams
       icon: fa-stack-overflow
