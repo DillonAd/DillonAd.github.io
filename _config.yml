@@ -6,7 +6,6 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 plugins:
   - jekyll-feed
-  - jekyll-font-awesome-sass
   - jekyll-mentions
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -19,9 +18,14 @@ title: DillonAd
 links:
   - site:
       url: https://github.com/DillonAd
-      icon: fa-github
+      icon: fa-brands fa-github
       description: GitHub
       a11y_label: GitHub
+  - site:
+      url: https://bsky.app/profile/codejanitor.dev
+      icon: fa-brands fa-bluesky
+      description: Bluesky
+      a11y_label: Bluesky
   - site:
       url: https://hachyderm.io/@DillonAd
       icon: fa-brands fa-mastodon
@@ -29,22 +33,22 @@ links:
       a11y_label: Mastodon
   - site:
       url: https://stackoverflow.com/users/7359614/dillon-adams
-      icon: fa-stack-overflow
+      icon: fab fa-stack-overflow
       description: StackOverflow
       a11y_label: StackOverflow
   - site:
       url: https://www.linkedin.com/in/dillon-adams
-      icon: fa-linkedin
+      icon: fab fa-linkedin
       description: LinkedIn
       a11y_label: LinkedIn
   - site:
       url: https://dev.to/dillonad
-      icon: fa-dev
+      icon: fab fa-dev
       description: Dev
       a11y_label: Dev.to
   - site:
       url: /feed.xml
-      icon: fa fa-rss
+      icon: fa-solid fa-rss
       description: RSS
       a11y_label: RSS
 navigation:
